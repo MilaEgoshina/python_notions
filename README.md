@@ -31,5 +31,3 @@ The project was implemented using Pull requests to merge changes from the dev br
 
 ## Project Development
 The project can be further developed and improved by adding new features, enhancing the user interface, and optimizing the code.
-
-Thank you for your interest in the "Python Notes Journal" project! If you have any questions or suggestions, feel free to reach out. We are always happy to help!
