@@ -14,6 +14,24 @@ The "Notes Journal" program has the following functionality:
 ## Project Description
 The project was implemented using Pull requests to merge changes from the dev branch into the master branch. The "Notes Journal" application stores data about notes in a text file and provides convenient management of the entries.
 
+## Installing
+
+1. Clone repository
+
+```git clone https://github.com/MilaEgoshina/python_notions```
+
+2. Creating a virtual environment
+
+```python3 -m venv venv```
+
+3. Activation of the virtual environment
+
+```source venv/bin/activate``
+
+4. Running a script to demonstrate the capabilities of python_notions
+
+```python3 main.py --help```
+
 ## Project Structure
 - Note.py - contains the Note class for representing a note
 - controller.py - file with the main application logic
