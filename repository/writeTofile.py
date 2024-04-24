@@ -1,4 +1,4 @@
-import Models.Note
+import models.Note
 
 
 def write_file(array, mode):
@@ -7,6 +7,6 @@ def write_file(array, mode):
     file.close()
     file = open("notes.csv", mode=mode, encoding='utf-8')
     for notes in array:
-        file.write(Models.Note.Note.to_string(notes))
+        file.write(models.Note.Note.to_string(notes))
         file.write('\n')
     file.close

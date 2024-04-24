@@ -1,32 +1,35 @@
-# Задание: 
-## **Информация о проекте**
-Необходимо написать проект, содержащий функционал работы с заметками. Программа должна уметь создавать заметку, сохранять её, читать список заметок, редактировать заметку, удалять заметку.
+# Project "Python Notes Journal"
 
-## **Как сдавать проект**
-Для сдачи проекта необходимо создать отдельный общедоступный репозиторий (Github, gitlub, или Bitbucket). Разработку вести в этом репозитории, использовать пул реквесты на изменения. Программа должна запускаться и работать, ошибок при выполнении программы быть не должно.
+This project is a program for working with notes, created using the Python programming language version 3.11.2 in the PyCharm development environment.
 
-## **Критерии оценки**
-Приложение должно запускаться без ошибок, должно уметь сохранять данные в файл, уметь читать данные из файла, делать выборку по дате, выводить на экран выбранную запись, выводить на экран весь список записок, добавлять записку, редактировать ее и удалять.
+## Functionality
+The "Notes Journal" program has the following functionality:
+- Displaying the notes journal
+- Displaying notes by unique identifier (id)
+- Displaying notes by date
+- Adding new notes to the journal
+- Editing existing notes by identifier
+- Deleting notes by identifier
 
+## Project Description
+The project was implemented using Pull requests to merge changes from the dev branch into the master branch. The "Notes Journal" application stores data about notes in a text file and provides convenient management of the entries.
 
-# Описание проекта:
+## Project Structure
+- Note.py - contains the Note class for representing a note
+- controller.py - file with the main application logic
+- commands.py - contains methods of the main commands for working with notes
+- counter.py - file with a counter for automatically assigning identifiers to notes
+- loadFromFile.py - module for extracting data from the notes journal file
+- writeToFile.py - module for writing data of the notes journal to a file
+- UI - folder with the user interface components
 
-1. Проект выполнен на яз Python ver 3.11.2 в IDE Pyrcharm
-2. Проект расположен на  [Github](https://github.com/AleksNest/Journal_notes/tree/master/)
-3. В проекте были использованы Pull requests на изменение с рабочей ветки dev в итоговую ветку master
-4. Приложение Журнал заметок выполняет следующий функционал:
-- вывод журнала заметок
-- вывод журнала заметок по id
-- вывод журнала заметок по дате
-- добавление заметок в журнал заметок
-- изменение заметки по id в журнале заметок
-- удаление заметки по id в журнале заметок
-- весь журнал заметок хранится в текстовом файле
-5. Структура проекта:
-- Note.py - класс сущности заметка
-- сontroller.py - выполнение основной логики приложения
-- commands.py - методы основных команд по работе с заметками
-- counter.py - счетчик для автоматического id заметки
-- loadFromFile.py - извлечение данных журанала заметок из файла
-- writeToFile.py - запись данных журнала заметок в файл
-- UI - пользовательский интерфейс
+## Usage
+1. Make sure you have Python version 3.11.2 installed
+2. Download the project repository
+3. Run the main.py file to start the application
+4. Follow the instructions in the console to work with the notes
+
+## Project Development
+The project can be further developed and improved by adding new features, enhancing the user interface, and optimizing the code.
+
+Thank you for your interest in the "Python Notes Journal" project! If you have any questions or suggestions, feel free to reach out. We are always happy to help!

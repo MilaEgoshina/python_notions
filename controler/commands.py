@@ -1,16 +1,16 @@
-import Repository.loadFromFile as lF
-import Repository.writeTofile as wF
-import Models.Note
+import repository.loadFromFile as lF
+import repository.writeTofile as wF
+import models.Note
 
 
 def add_note():
     title = input("Введите заголовок заметки:\n")
     body = input("Введите описание заметки:\n")
-    note = Models.Note.Note(title=title, body=body)
+    note = models.Note.Note(title=title, body=body)
     array_notes = lF.read_file()
     for i in array_notes:
-        if Models.Note.Note.get_id(note) == Models.Note.Note.get_id(i):
-            Models.Note.Note.set_id(note)
+        if models.Note.Note.get_id(note) == models.Note.Note.get_id(i):
+            models.Note.Note.set_id(note)
     array_notes.append(note)
     wF.write_file(array_notes, 'a')
     print("Заметка добавлена в журнал!")
@@ -23,16 +23,16 @@ def show(txt):
         if txt == "all":
             print("ЖУРНАЛ ЗАМЕТОК:")
             for i in array_notes:
-                print(Models.Note.Note.map_note(i))
+                print(models.Note.Note.map_note(i))
 
         elif txt == "ID":
             for i in array_notes:
-                print("ID: ", Models.Note.Note.get_id(i))
+                print("ID: ", models.Note.Note.get_id(i))
             id = input("\nВведите id заметки: ")
             flag = True
             for i in array_notes:
-                if id == Models.Note.Note.get_id(i):
-                    print(Models.Note.Note.map_note(i))
+                if id == models.Note.Note.get_id(i):
+                    print(models.Note.Note.map_note(i))
                     flag = False
             if flag:
                 print("Нет такого ID")
@@ -41,9 +41,9 @@ def show(txt):
             date = input("Введите дату в формате: dd.mm.yyyy: ")
             flag = True
             for i in array_notes:
-                date_note = str(Models.Note.Note.get_date(i))
+                date_note = str(models.Note.Note.get_date(i))
                 if date == date_note[:10]:
-                    print(Models.Note.Note.map_note(i))
+                    print(models.Note.Note.map_note(i))
                     flag = False
             if flag:
                 print("Нет такой даты")
@@ -57,7 +57,7 @@ def del_notes():
     flag = False
 
     for i in array_notes:
-        if id == Models.Note.Note.get_id(i):
+        if id == models.Note.Note.get_id(i):
             array_notes.remove(i)
             flag = True
 
@@ -74,10 +74,10 @@ def change_note():
     flag = True
     array_notes_new = []
     for i in array_notes:
-        if id == Models.Note.Note.get_id(i):
+        if id == models.Note.Note.get_id(i):
             i.title = input("измените  заголовок:\n")
             i.body = input("измените  описание:\n")
-            Models.Note.Note.set_date(i)
+            models.Note.Note.set_date(i)
             logic = False
         array_notes_new.append(i)
 
