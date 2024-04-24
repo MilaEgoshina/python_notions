@@ -26,7 +26,7 @@ The project was implemented using Pull requests to merge changes from the dev br
 
 3. Activation of the virtual environment
 
-```source venv/bin/activate``
+```source venv/bin/activate```
 
 4. Running a script to demonstrate the capabilities of python_notions
 
